@@ -1,0 +1,20 @@
+### Get all patients
+GET http://localhost:3001/api/patients/
+
+### Get patient by id
+GET http://localhost:3001/api/patients/d2773336-f723-11e9-8f0b-362b9e155667
+
+### Add a new entry to patient
+POST http://localhost:3001/api/patients/d2773336-f723-11e9-8f0b-362b9e155667/entries
+Content-Type: application/json
+
+{
+	"date": "2024-12-10",
+	"specialist": "MD House",
+	"description": "patient was involved in a fender bender",
+	"type": "Hospital",
+	"discharge": {
+		"date": "2024-12-15",
+		"criteria": "patient's injuries have healed"
+	}
+}
